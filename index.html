@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2P Ink | Realismo Preto &amp; Cinza</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Realismo preto e cinza em Florianópolis com o tatuador Pedro, o 2P. Tatuagens atemporais, com atenção a cada detalhe, volume e textura. Orçamento pelo WhatsApp.">
+<meta property="og:title" content="2P Ink | Realismo Preto &amp; Cinza">
+<meta property="og:description" content="Realismo preto e cinza em Florianópolis. Orçamento pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="assets/banner-2p.webp">
+<meta name="theme-color" content="#0b0a0d">
+<link rel="icon" type="image/png" href="favicon.png?v=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
+<link rel="preload" as="image" href="assets/banner-2p.webp" imagesrcset="assets/banner-2p-800.webp 800w, assets/banner-2p.webp 1400w" imagesizes="(min-width: 768px) 56vw, 100vw" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* Layout: mesmo modelo do site do Léo — capa com foto à esquerda, faixas pretas e brancas alternadas.
+   Cor: preto, branco e o roxo escuro do decalque (stencil) como único acento. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --fg: #16141a;
+  --ink: #0b0a0d;          /* preto das faixas escuras */
+  --soft: #f6f4f9;         /* branco levemente arroxeado */
+  --line: #e4dfec;
+  --muted: #5d5866;
+  --stencil: #4a2a86;      /* roxo do decalque, sobre fundo branco */
+  --stencil-lt: #b9a3e3;   /* roxo do decalque, sobre fundo preto */
+  --hero-fg: #ffffff;
+  --hero-muted: #d6d2dd;
+  --wa: #15803d;
+  --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: .375rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+button { font: inherit; }
+img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--stencil); outline-offset: 3px; }
+.nw { white-space: nowrap; }
+
+.wrap { max-width: 72rem; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.section { padding-block: 4rem; }
+@media (min-width: 768px) { .section { padding-block: 6rem; } }
+.h2 { font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.25rem); line-height: 1.15; text-align: center; }
+.lead { font-size: .875rem; color: var(--muted); text-align: center; margin: 1rem auto 0; max-width: 30rem; line-height: 1.6; }
+.icon { width: 1rem; height: 1rem; flex: none; }
+
+/* ---------- CAPA ---------- */
+.hero { position: relative; overflow: hidden; background: var(--ink); color: var(--hero-fg); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(11 10 13 / .35) 0%, rgb(11 10 13 / .55) 45%, rgb(11 10 13 / .92) 100%); pointer-events: none; }
+.hero-inner { position: relative; z-index: 1; min-height: 82svh; display: flex; align-items: flex-end; justify-content: center; padding-block: 5rem 3.5rem; }
+.hero-copy { max-width: 36rem; text-align: center; }
+.brand { display: inline-flex; align-items: baseline; gap: .6rem; margin-bottom: 1rem; font-size: .75rem; font-weight: 500; letter-spacing: .35em; text-transform: uppercase; color: var(--stencil-lt); }
+.brand b { font-family: var(--display); font-style: italic; font-size: 1.6rem; letter-spacing: .02em; text-transform: none; color: var(--hero-fg); font-weight: 500; }
+.hero h1 { font-size: clamp(3rem, 1.6rem + 4.4vw, 5.25rem); line-height: 1.05; }
+.hero h1 em { font-style: italic; color: var(--stencil-lt); }
+.hero-sub { margin: 1.5rem auto 0; max-width: 28rem; font-size: clamp(1rem, .95rem + .25vw, 1.125rem); line-height: 1.65; color: var(--hero-muted); }
+.hero-cta { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2rem; padding: .85rem 1.4rem; border: 1px solid var(--stencil-lt); border-radius: 999px; color: var(--hero-fg); text-decoration: none; font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; transition: background .2s; }
+.hero-cta:hover { background: rgb(185 163 227 / .15); }
+.hero-cta svg { width: 1rem; height: 1rem; }
+@media (min-width: 768px) {
+  .hero-inner { min-height: 84svh; align-items: center; padding-block: 6rem; justify-content: flex-end; }
+  .hero-img { right: auto; width: 56%; object-position: 50% 35%; }
+  .hero::after { background: linear-gradient(270deg, var(--ink) 0 44%, rgb(11 10 13 / .55) 58%, rgb(11 10 13 / .1) 100%); }
+  .hero-copy { text-align: left; width: 44%; max-width: 31rem; }
+  .hero-sub { margin-left: 0; }
+}
+@media (min-width: 768px) and (max-width: 1023px) { .hero h1 { font-size: 3.25rem; } }
+
+/* idiomas */
+.lang { position: absolute; z-index: 3; display: flex; gap: .35rem; top: calc(.85rem + env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 768px) { .lang { top: 1.25rem; right: 1.5rem; } }
+.lang button { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .6rem .35rem .45rem; cursor: pointer; border: 1px solid rgb(255 255 255 / .22); border-radius: 999px; background: rgb(11 10 13 / .55); color: var(--hero-fg); font-size: .72rem; font-weight: 600; letter-spacing: .08em; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: border-color .2s, color .2s; }
+.lang button:hover { border-color: rgb(185 163 227 / .7); }
+.lang button[aria-pressed="true"] { border-color: var(--stencil-lt); color: var(--stencil-lt); }
+.lang svg { width: 1.3rem; height: .875rem; border-radius: 2px; box-shadow: 0 0 0 1px rgb(255 255 255 / .25); }
+
+/* letreiro */
+.marquee { position: relative; z-index: 1; display: flex; overflow: hidden; padding-block: .75rem; background: var(--ink); border-block: 1px dashed rgb(185 163 227 / .45); }
+.marquee-track { display: flex; flex: none; gap: 2rem; padding-right: 2rem; white-space: nowrap; animation: marquee 32s linear infinite; }
+.marquee span { display: inline-flex; gap: 2rem; font-size: .75rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--hero-muted); }
+.marquee b { color: var(--stencil-lt); font-weight: 400; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- PORTFÓLIO (espaços reservados até chegarem as fotos) ---------- */
+.grid { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } }
+.slot { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 5; max-width: 100%; border-radius: .75rem; background: var(--soft); border: 1.5px dashed rgb(74 42 134 / .35); color: var(--stencil); text-align: center; padding: 1rem; }
+.slot span { font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+.pf { display: block; padding: 0; border: 0; background: none; border-radius: .75rem; overflow: hidden; cursor: zoom-in; }
+.pf img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .3s ease; }
+.pf:hover img { transform: scale(1.04); }
+
+/* ---------- QUEM SOU EU ---------- */
+.about-band { background: var(--soft); border-block: 1px solid var(--line); }
+.about { display: grid; align-items: center; gap: 2.5rem; }
+@media (min-width: 768px) { .about { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: 3rem; } }
+@media (min-width: 1024px) { .about { gap: 4rem; } }
+.about-img { width: 100%; max-width: 22rem; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); justify-self: center; box-shadow: 10px 10px 0 -1px var(--bg), 10px 10px 0 0 var(--stencil); }
+@media (min-width: 768px) { .about-img { max-width: 24rem; justify-self: end; } }
+.about > div { min-width: 0; }
+.eyebrow { font-size: .75rem; font-weight: 500; letter-spacing: .25em; text-transform: uppercase; color: var(--stencil); }
+.about h2 { margin-top: .6rem; font-size: clamp(1.875rem, 1.5rem + 1.2vw, 2.25rem); line-height: 1.15; }
+.about p.txt { margin-top: 1.25rem; line-height: 1.7; color: var(--muted); max-width: 38rem; }
+.facts { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.facts span { padding: .35rem .8rem; border: 1px solid rgb(74 42 134 / .3); border-radius: 999px; font-size: .78rem; color: var(--stencil); background: var(--bg); }
+.link { display: inline-flex; align-items: center; gap: .5rem; font-size: .875rem; font-weight: 500; color: var(--stencil); text-decoration: none; text-underline-offset: 4px; }
+.link:hover { text-decoration: underline; }
+.about .link { margin-top: 1.75rem; letter-spacing: .04em; text-transform: uppercase; }
+
+/* ---------- AVALIAÇÕES ---------- */
+.rev-badge { display: inline-flex; align-items: center; gap: .55rem; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); text-decoration: none; font-size: .85rem; font-weight: 500; }
+.rev-badge:hover { border-color: var(--stencil); }
+.rev-badge svg { width: 1.35rem; height: 1.35rem; }
+.rev-num { font-size: 1.5rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.rev-badge .stars { margin: 0; }
+.rev-badge .stars svg { width: 1.05rem; height: 1.05rem; }
+.rev-badge > span { color: var(--muted); }
+.reviews { margin-top: 2.5rem; display: flex; align-items: stretch; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: none; text-align: left; }
+.reviews::-webkit-scrollbar { display: none; }
+.review { flex: none; width: 86%; min-height: 19rem; scroll-snap-align: start; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--bg); }
+@media (min-width: 640px) { .review { width: calc(50% - .5rem); } }
+@media (min-width: 1024px) { .review { width: calc(33.333% - .667rem); } }
+.review-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .75rem; }
+.avatar { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 999px; background: var(--ink); color: var(--stencil-lt); font-size: .875rem; font-weight: 600; text-transform: uppercase; }
+.review h3 { font: 500 1rem/1.3 var(--body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.review time { display: block; margin-top: .2rem; font-size: .75rem; color: var(--muted); }
+.g-badge { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 999px; border: 1px solid var(--line); }
+.g-badge svg { width: 1rem; height: 1rem; }
+.stars { display: flex; gap: .1rem; margin-top: 1.25rem; color: #e3a92b; }
+.stars svg { width: 1rem; height: 1rem; }
+.review-text { margin-top: 1rem; font-size: .875rem; line-height: 1.65; }
+.review-text.clamp { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
+.review.has-photos .review-text.clamp { -webkit-line-clamp: 3; }
+.more { align-self: flex-start; margin-top: .5rem; padding: 0; border: 0; background: none; color: var(--stencil); font-size: .8rem; font-weight: 500; cursor: pointer; text-underline-offset: 3px; }
+.more:hover { text-decoration: underline; }
+.review-photo { margin-top: auto; padding: 1rem 0 0; border: 0; background: none; height: 13rem; cursor: zoom-in; }
+.review-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: .375rem; }
+.ctrls { margin-top: 1rem; display: flex; justify-content: center; gap: .75rem; }
+.ctrl { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; transition: background .2s; }
+.ctrl:hover { background: var(--soft); }
+.ctrl svg { width: 1.25rem; height: 1.25rem; }
+
+/* ---------- FOTO AMPLIADA ---------- */
+.lightbox { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 1rem; background: rgb(8 7 10 / .94); }
+.lightbox img { max-width: 92vw; max-height: 84vh; width: auto; height: auto; border-radius: .5rem; }
+.lb-close { position: absolute; top: calc(1rem + env(safe-area-inset-top, 0px)); right: calc(1rem + env(safe-area-inset-right, 0px)); display: grid; place-items: center; padding: .5rem; border: 0; border-radius: 999px; background: rgb(255 255 255 / .12); color: #fff; cursor: pointer; }
+.lb-close svg { width: 1.5rem; height: 1.5rem; }
+
+/* ---------- ORÇAMENTO ---------- */
+.quote { background: var(--ink); color: var(--hero-fg); }
+.quote .lead { color: var(--hero-muted); }
+.quote strong { color: var(--stencil-lt); font-weight: 600; }
+.quote-box { max-width: 36rem; margin: 0 auto; }
+.price { margin: 2rem auto 0; display: flex; flex-direction: column; align-items: center; gap: .25rem; padding: 1.5rem 1rem; border: 1px dashed rgb(185 163 227 / .5); border-radius: .6rem; text-align: center; }
+.price small { font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--hero-muted); }
+.price b { font-family: var(--display); font-size: clamp(2.5rem, 2rem + 2vw, 3.25rem); font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.lead-form { margin-top: 2rem; display: grid; gap: 1rem; }
+.field label { display: block; margin-bottom: .4rem; font-size: .8rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--hero-muted); }
+.field input { width: 100%; padding: .9rem 1.1rem; border: 1px solid rgb(255 255 255 / .2); border-radius: .6rem; background: rgb(255 255 255 / .06); color: var(--hero-fg); font: inherit; font-size: 1rem; transition: border-color .2s, background .2s; }
+.field input::placeholder { color: rgb(255 255 255 / .4); }
+.field input:focus { outline: none; border-color: var(--stencil-lt); background: rgb(255 255 255 / .09); }
+.field input[aria-invalid="true"] { border-color: #ef6b6b; }
+.field-err { margin-top: .35rem; font-size: .8rem; color: #ef9a9a; }
+.field-err:empty { display: none; }
+.form-ok { margin: 0; padding: .85rem 1rem; border: 1px solid rgb(185 163 227 / .5); border-radius: .6rem; color: var(--stencil-lt); font-size: .875rem; text-align: center; }
+.form-ok a { color: var(--hero-fg); }
+.btn-wa { display: flex; align-items: center; justify-content: center; gap: .75rem; width: 100%; margin-top: .5rem; padding: 1.1rem 1.5rem; border: 0; cursor: pointer; border-radius: 999px; background: var(--wa); color: #fff; font-family: inherit; font-size: 1rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; transition: transform .2s ease, filter .2s; }
+.btn-wa:hover { transform: scale(1.02); filter: brightness(1.06); }
+.btn-wa svg { width: 1.4rem; height: 1.4rem; flex: none; }
+@media (max-width: 440px) { .btn-wa { font-size: .85rem; letter-spacing: .03em; padding-inline: 1rem; } }
+
+/* ---------- RODAPÉ ---------- */
+footer { background: var(--ink); color: var(--hero-fg); border-top: 1px dashed rgb(185 163 227 / .35); }
+.foot { padding-block: 2rem; display: flex; flex-direction: column; align-items: center; gap: .6rem; text-align: center; }
+.foot-brand { font-family: var(--display); font-style: italic; font-size: 1.5rem; }
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; font-size: .8rem; }
+.foot-links a, .foot-links span { display: inline-flex; align-items: center; gap: .4rem; color: var(--hero-muted); text-decoration: none; transition: color .2s; }
+.foot-links a:hover { color: var(--stencil-lt); }
+.foot-links svg { width: 1rem; height: 1rem; }
+.copy { font-size: .7rem; color: #a8a4ae; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  .btn-wa, .pf img { transition: none; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 2.3a.6.6 0 0 1 1 0l2.6 5.4 5.9.8a.6.6 0 0 1 .3 1l-4.3 4.2 1 5.9a.6.6 0 0 1-.8.6L12 17.4l-5.3 2.8a.6.6 0 0 1-.8-.6l1-5.9-4.3-4.2a.6.6 0 0 1 .3-1l5.9-.8Z"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C8.85 3 3 8.73 3 15.77c0 2.25.6 4.44 1.75 6.36L3 28.5l6.57-1.690a13.2 13.2 0 0 0 6.47 1.67C23.23 28.48 29 22.75 29 15.71 29 8.73 23.230 3 16.04 3Zm7.59 18.02c-.32.88-1.88 1.69-2.61 1.79-.68.1-1.54.14-2.48-.15-.57-.18-1.3-.42-2.24-.82-3.94-1.67-6.52-5.57-6.72-5.83-.2-.26-1.6-2.09-1.6-3.99 0-1.9 1.01-2.83 1.37-3.22.36-.39.78-.49 1.05-.49h.75c.24 0 .56-.09.88.65.32.75 1.1 2.64 1.2 2.83.1.2.16.42.03.68-.13.26-.2.42-.39.65-.2.23-.41.51-.59.68-.2.2-.4.41-.17.8.23.39 1.02 1.640 2.19 2.66 1.5 1.31 2.77 1.72 3.16 1.92.39.2.62.16.85-.1.23-.26.98-1.12 1.24-1.51.26-.39.52-.33.88-.2.36.13 2.29 1.06 2.68 1.25.39.2.65.29.75.46.1.16.1.94-.22 1.82Z"/></symbol>
+    <symbol id="i-g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <nav class="lang" data-a="aria-label:langAria" aria-label="Idioma">
+    <button type="button" data-lang="pt" aria-pressed="true" title="Português"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009C3B"/><path d="M15 2.2 27.6 10 15 17.8 2.4 10Z" fill="#FFDF00"/><circle cx="15" cy="10" r="4.3" fill="#002776"/><path d="M10.9 9.1c2.7-.6 5.6-.2 8.2 1.4" stroke="#fff" stroke-width=".7" fill="none"/></svg>PT</button>
+    <button type="button" data-lang="en" aria-pressed="false" title="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#B22234"/><g fill="#fff"><rect y="1.54" width="30" height="1.54"/><rect y="4.62" width="30" height="1.54"/><rect y="7.69" width="30" height="1.54"/><rect y="10.77" width="30" height="1.54"/><rect y="13.85" width="30" height="1.54"/><rect y="16.92" width="30" height="1.54"/></g><rect width="12" height="10.77" fill="#3C3B6E"/></svg>EN</button>
+    <button type="button" data-lang="es" aria-pressed="false" title="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg>ES</button>
+  </nav>
+  <img class="hero-img" src="assets/banner-2p.webp" srcset="assets/banner-2p-800.webp 800w, assets/banner-2p.webp 1400w" sizes="(min-width: 768px) 56vw, 100vw" width="1400" height="1863" fetchpriority="high" decoding="async" data-a="alt:heroAlt" alt="Pedro, o 2P, sorrindo, sentado no estúdio de camiseta preta, com tatuagens no pescoço, nos braços e nas mãos">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="brand"><b>2P</b> Tattoo · Florianópolis</p>
+      <h1 data-t="h1">Realismo <em>preto</em> <span class="nw">&amp; cinza</span></h1>
+      <p class="hero-sub" data-t="heroSub">Tatuagens atemporais, com atenção a cada detalhe, volume e textura. Projetos únicos, criados a partir da sua ideia.</p>
+      <a class="hero-cta" href="#orcamento"><span data-t="heroCta">Pedir orçamento</span><svg aria-hidden="true"><use href="#i-down"/></svg></a>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+</header>
+
+<main>
+  <section class="wrap section" id="portfolio">
+    <h2 class="h2" data-t="pfTitulo">Portfólio</h2>
+    <p class="lead" data-t="pfLead">Alguns trabalhos em realismo preto e cinza. Veja mais no Instagram.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="about-band" id="sobre">
+    <div class="wrap section">
+      <div class="about">
+        <img class="about-img" src="assets/sobre-2p.webp" srcset="assets/sobre-2p-480.webp 480w, assets/sobre-2p.webp 800w" sizes="(min-width: 768px) 24rem, 22rem" width="800" height="1000" loading="lazy" decoding="async" data-a="alt:aboutAlt" alt="Pedro, o 2P, sorrindo no estúdio, de camiseta preta, com tatuagens no pescoço, nos braços e nas mãos">
+        <div>
+          <p class="eyebrow" data-t="sobreEyebrow">Quem sou eu</p>
+          <h2>Pedro, o 2P</h2>
+          <p class="txt" data-t="sobre1">Sou Pedro, conhecido por todos como 2P, nascido e criado em Florianópolis. Comecei minha trajetória na tatuagem em 2020 e encontrei no realismo preto e cinza a minha forma de expressar arte e transformar ideias em projetos únicos.</p>
+          <p class="txt" data-t="sobre2">Desde então, busco evoluir a cada trabalho, com atenção a cada detalhe, volume e textura. Meu propósito é criar tatuagens atemporais, que chamem atenção pela qualidade, transmitam sua essência e tenham significado para quem as carrega.</p>
+          <div class="facts"><span data-t="fato1">Tatuando desde 2020</span><span data-t="fato2">Realismo preto e cinza</span><span data-t="fato3">Florianópolis, SC</span></div>
+          <a class="link" href="https://www.instagram.com/2p.ink/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>@2p.ink</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="avaliacoes" style="text-align:center">
+    <a class="rev-badge" href="https://share.google/ScxeFGxFI6du87c0W" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-g"/></svg><b class="rev-num" data-t="nota">5,0</b><span class="stars" aria-hidden="true" id="badge-stars"></span><span data-t="avBadge">34 avaliações</span></a>
+    <h2 class="h2" style="margin-top:1.25rem" data-t="avTitulo">O que dizem os clientes</h2>
+    <p class="lead" data-t="avLead">Avaliações reais de quem já tatuou com o 2P, direto do Google.</p>
+    <div id="reviews-box">
+      <div class="reviews" id="reviews" data-a="aria-label:avAria" aria-label="Avaliações de clientes"></div>
+      <div class="ctrls">
+        <button type="button" class="ctrl" id="rev-prev" data-a="aria-label:avAnt" aria-label="Avaliação anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+        <button type="button" class="ctrl" id="rev-next" data-a="aria-label:avProx" aria-label="Próxima avaliação"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <div style="margin-top:2.25rem">
+      <a class="link" href="https://share.google/ScxeFGxFI6du87c0W" target="_blank" rel="noopener noreferrer"><span data-t="avLink">Ver todas as avaliações no Google</span><svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    </div>
+  </section>
+
+  <section class="quote" id="orcamento">
+    <div class="wrap section">
+      <div class="quote-box">
+        <h2 class="h2" data-t="orcTitulo">Quanto custa uma tatuagem com o 2P?</h2>
+        <div class="price"><small data-t="orcAPartir">Valor mínimo</small><b>R$&nbsp;1.350</b></div>
+        <p class="lead" data-t="orcTexto">O valor final depende do tamanho, do local do corpo e dos detalhes do projeto.</p>
+        <p class="lead" style="max-width:none;margin-top:.75rem" data-t="orcSub">Deixe seu nome e telefone e continue a conversa no WhatsApp.</p>
+        <form class="lead-form" id="lead-form" novalidate>
+          <div class="field">
+            <label for="f-nome" data-t="fNome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required maxlength="80" data-a="placeholder:fNomePh" placeholder="Seu nome completo" aria-describedby="e-nome">
+            <p class="field-err" id="e-nome" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-tel" data-t="fTel">Telefone / WhatsApp</label>
+            <input id="f-tel" name="telefone" type="tel" inputmode="numeric" autocomplete="tel-national" required maxlength="15" placeholder="(48) 99999-9999" aria-describedby="e-tel">
+            <p class="field-err" id="e-tel" aria-live="polite"></p>
+          </div>
+          <p class="form-ok" id="form-ok" role="status" hidden></p>
+          <button type="submit" class="btn-wa"><svg aria-hidden="true"><use href="#i-wa"/></svg><span data-t="orcBotao">Quero meu orçamento</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p class="foot-brand">2P</p>
+    <div class="foot-links">
+      <a href="https://www.instagram.com/2p.ink/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-ig"/></svg>@2p.ink</a>
+      <span><svg aria-hidden="true"><use href="#i-wa"/></svg>(48) 3197-6757</span>
+      <span><svg aria-hidden="true"><use href="#i-pin"/></svg>Florianópolis, SC</span>
+    </div>
+    <p class="copy">© <span id="year">2026</span> 2P Tattoo. <span data-t="direitos">Todos os direitos reservados.</span></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" data-a="aria-label:lbAria" aria-label="Foto ampliada" hidden>
+  <button type="button" class="lb-close" id="lb-close" data-a="aria-label:lbFechar" aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  <div id="lb-media"></div>
+</div>
+
+<script>
+/* ============ CONTEÚDO ============ */
+const site = {
+  whatsapp: "https://wa.me/554831976757",
+  /* webhook do Make para os cadastros: deixe "" para não enviar (não usar o do Léo) */
+  webhook: "",
+  /* Portfólio: fotos em "assets/2p-NN.webp" (com versão "-480" para celular). Até completar 6, o resto aparece como espaço reservado. */
+  portfolio: ["assets/2p-01.webp"],
+  /* Avaliações do Google (texto original). anos = há quantos anos. */
+  avaliacoes: [
+    { nome: "filipe borba", anos: 1, texto: "Espaço organizado e profissional! Muito feliz com minha sessão e ja agendando a próxima!", foto: "assets/avaliacao-filipe.webp" },
+    { nome: "Gabriela Cardoso", anos: 1, texto: "O estúdio fica muito bem localizado, ao lado da prefeitura de Florianópolis. O tatuador Pedro é um exímio profissional, a precisão nos traços, a criatividade, o controle, a habilidade com a agulha são diferenciais valiosos.\nAdemais, as macas são modernas, o ambiente é seguro e limpo.\nO profissionalismo do estúdio realmente impressiona!" },
+    { nome: "Luiza Vaucher", anos: 1, texto: "Melhor estúdio e equipe de floripa!! O dono do estúdio é uma das pessoas mais dedicadas, competentes e responsáveis que eu ja vi no ramo, além de ser um DEUS no realismo. Cuidado extremo em todos os quesitos, desde a elaboração da ideia no gosto do cliente, até nos detalhes de biossegurança.. Recomendo de olhos fechados." },
+    { nome: "Manu Melo", anos: 1, texto: "Todas minhas tatuagens são com o Pepe e são incríveis, todo mundo sempre me pergunta com quem fiz, lugar ótimo, localização muito boa, preço bom e com uma pessoa de confiança, não troco por nada!!" },
+    { nome: "Matheus Hermenegildo", anos: 1, texto: "Atendimento diferenciado! Tudo muito cuidadoso e pensado elaborado junto com cliente!\nExperiência personalizada!\nCom certeza voltarei" },
+    { nome: "Eduardo Velho Ed Velho", anos: 1, texto: "Atendimento incrível, lugar agradável. As tatuagens que fiz com os profissionais da Tettoo Preto Ink são minhas preferidas, e o cuidado é visto desde o agendamento até mesmo depois que a tatuagem já foi feita. Só faço tattoo nesse lugar!" },
+    { nome: "Nícolas", anos: 1, texto: "Studio bem localizado no centro de Florianópolis, o espaço é agradável e bem receptivo, atendimento ótimo por parte dos profissionais e os trabalhos artísticos são impecáveis." },
+    { nome: "prodby mb", anos: 1, texto: "Trampo excelente da equipe toda, principalmente no pós tattoo, se importam com a cicatrização e o resultado final" },
+  ],
+};
+
+/* ============ TEXTOS (PT / EN / ES) ============ */
+const TXT = {
+  pt: {
+    lang: "pt-BR",
+    msg: "Olá, vim pelo site do 2P e quero fazer minha tatuagem!",
+    slot: "Foto do portfólio",
+    pfAlt: ["Rosácea gótica em blackwork com relógio de números romanos no antebraço"],
+    rev: { tempo: (n) => `há ${n} ${n === 1 ? "ano" : "anos"}`, mais: "Ler mais", menos: "Ler menos", googleAria: "Avaliação do Google", starsAria: "5 de 5 estrelas", foto: "Foto enviada pelo cliente na avaliação" },
+    form: { errNome: "Digite seu nome.", errTel: "Digite um telefone válido com DDD.", ok: "Recebemos seu contato! Se o WhatsApp não abriu, ", okLink: "toque aqui" },
+    marquee: ["REALISMO", "PRETO & CINZA", "VOLUME", "TEXTURA", "DETALHE", "ATEMPORAL", "FLORIANÓPOLIS"],
+    t: {}, a: {},
+  },
+  en: {
+    lang: "en",
+    msg: "Hi, I came from 2P's website and I'd like to get a tattoo!",
+    slot: "Portfolio photo",
+    pfAlt: ["Gothic rose window in blackwork with a Roman numeral clock on the forearm"],
+    rev: { tempo: (n) => `${n} year${n === 1 ? "" : "s"} ago`, mais: "Read more", menos: "Read less", googleAria: "Google review", starsAria: "5 out of 5 stars", foto: "Photo posted by the client with the review" },
+    form: { errNome: "Please enter your name.", errTel: "Please enter a valid phone number with area code.", ok: "We got your details! If WhatsApp didn't open, ", okLink: "tap here" },
+    marquee: ["REALISM", "BLACK & GREY", "VOLUME", "TEXTURE", "DETAIL", "TIMELESS", "FLORIANÓPOLIS"],
+    t: {
+      h1: 'Black <em>&amp;</em> <span class="nw">grey realism</span>',
+      heroSub: "Timeless tattoos with attention to every detail, volume and texture. One-of-a-kind projects built from your idea.",
+      heroCta: "Get a quote",
+      pfTitulo: "Portfolio", pfLead: "A selection of black and grey realism work. See more on Instagram.",
+      sobreEyebrow: "About me",
+      sobre1: "I'm Pedro, known to everyone as 2P, born and raised in Florianópolis. I started tattooing in 2020 and found in black and grey realism my way of expressing art and turning ideas into unique projects.",
+      sobre2: "Since then I've worked to grow with every piece, paying attention to every detail, volume and texture. My goal is to create timeless tattoos that stand out for their quality, carry your essence and mean something to the person who wears them.",
+      fato1: "Tattooing since 2020", fato2: "Black and grey realism", fato3: "Florianópolis, Brazil",
+      nota: "5.0", avBadge: "34 reviews", avTitulo: "What clients say", avLead: "Real reviews from people who got tattooed by 2P, straight from Google. (Shown in their original Portuguese.)", avLink: "See all reviews on Google",
+      orcTitulo: "How much is a tattoo with 2P?", orcAPartir: "Starting at",
+      orcTexto: "The final price depends on the size, placement and detail of the project (prices in Brazilian reais).",
+      orcSub: "Leave your name and phone number and continue the conversation on WhatsApp.",
+      fNome: "Name", fTel: "Phone / WhatsApp", orcBotao: "Get my quote", direitos: "All rights reserved.",
+    },
+    a: { langAria: "Language", fNomePh: "Your full name", avAria: "Client reviews", avAnt: "Previous review", avProx: "Next review", lbAria: "Enlarged photo", lbFechar: "Close",
+      heroAlt: "Pedro, known as 2P, smiling, seated in the studio in a black T-shirt, with tattoos on his neck, arms and hands",
+      aboutAlt: "Pedro, known as 2P, smiling in the studio in a black T-shirt, with tattoos on his neck, arms and hands" },
+  },
+  es: {
+    lang: "es",
+    msg: "¡Hola! Vengo del sitio web de 2P y quiero hacerme un tatuaje.",
+    slot: "Foto del portafolio",
+    pfAlt: ["Rosetón gótico en blackwork con reloj de números romanos en el antebrazo"],
+    rev: { tempo: (n) => `hace ${n} ${n === 1 ? "año" : "años"}`, mais: "Leer más", menos: "Leer menos", googleAria: "Reseña de Google", starsAria: "5 de 5 estrellas", foto: "Foto enviada por el cliente en la reseña" },
+    form: { errNome: "Escribe tu nombre.", errTel: "Escribe un teléfono válido con código de área.", ok: "¡Recibimos tus datos! Si WhatsApp no se abrió, ", okLink: "toca aquí" },
+    marquee: ["REALISMO", "NEGRO & GRIS", "VOLUMEN", "TEXTURA", "DETALLE", "ATEMPORAL", "FLORIANÓPOLIS"],
+    t: {
+      h1: 'Realismo en <em>negro</em> <span class="nw">y gris</span>',
+      heroSub: "Tatuajes atemporales, con atención a cada detalle, volumen y textura. Proyectos únicos creados a partir de tu idea.",
+      heroCta: "Pedir presupuesto",
+      pfTitulo: "Portafolio", pfLead: "Algunos trabajos en realismo negro y gris. Mira más en Instagram.",
+      sobreEyebrow: "Quién soy",
+      sobre1: "Soy Pedro, conocido por todos como 2P, nacido y criado en Florianópolis. Empecé mi camino en el tatuaje en 2020 y encontré en el realismo en negro y gris mi forma de expresar arte y transformar ideas en proyectos únicos.",
+      sobre2: "Desde entonces busco evolucionar en cada trabajo, con atención a cada detalle, volumen y textura. Mi propósito es crear tatuajes atemporales, que llamen la atención por su calidad, transmitan tu esencia y tengan significado para quien los lleva.",
+      fato1: "Tatuando desde 2020", fato2: "Realismo negro y gris", fato3: "Florianópolis, Brasil",
+      nota: "5,0", avBadge: "34 reseñas", avTitulo: "Lo que dicen los clientes", avLead: "Reseñas reales de quienes ya se tatuaron con 2P, directo de Google. (En su portugués original.)", avLink: "Ver todas las reseñas en Google",
+      orcTitulo: "¿Cuánto cuesta un tatuaje con 2P?", orcAPartir: "Valor mínimo",
+      orcTexto: "El precio final depende del tamaño, la zona del cuerpo y los detalles del proyecto (precios en reales brasileños).",
+      orcSub: "Deja tu nombre y teléfono y continúa la conversación por WhatsApp.",
+      fNome: "Nombre", fTel: "Teléfono / WhatsApp", orcBotao: "Quiero mi presupuesto", direitos: "Todos los derechos reservados.",
+    },
+    a: { langAria: "Idioma", fNomePh: "Tu nombre completo", avAria: "Reseñas de clientes", avAnt: "Reseña anterior", avProx: "Siguiente reseña", lbAria: "Foto ampliada", lbFechar: "Cerrar",
+      heroAlt: "Pedro, conocido como 2P, sonriendo, sentado en el estudio con camiseta negra y tatuajes en el cuello, los brazos y las manos",
+      aboutAlt: "Pedro, conocido como 2P, sonriendo en el estudio con camiseta negra y tatuajes en el cuello, los brazos y las manos" },
+  },
+};
+
+/* ============ CÓDIGO ============ */
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let L = TXT.pt;
+const waLink = () => `${site.whatsapp}?text=${encodeURIComponent(L.msg)}`;
+
+document.querySelectorAll("[data-t]").forEach((el) => { TXT.pt.t[el.dataset.t] = el.innerHTML; });
+document.querySelectorAll("[data-a]").forEach((el) => { const [attr, k] = el.dataset.a.split(":"); TXT.pt.a[k] = el.getAttribute(attr); });
+
+function renderMarquee() {
+  const w = [...L.marquee, ...L.marquee, ...L.marquee, ...L.marquee];
+  $("marquee").innerHTML = w.map((x) => `<span>${esc(x)} <b>✦</b></span>`).join("");
+}
+function renderGrid() {
+  const fotos = site.portfolio.map((src, i) => { const alt = (L.pfAlt || [])[i] || L.slot, sm = src.replace(/\.webp$/, "-480.webp");
+    return `<button type="button" class="pf" data-src="${src}" data-alt="${esc(alt)}" aria-label="${esc(alt)}"><img src="${src}" srcset="${sm} 480w, ${src} 900w" sizes="(min-width: 768px) 23rem, 50vw" alt="${esc(alt)}" loading="lazy" decoding="async"></button>`; });
+  const vazios = Array.from({ length: Math.max(0, 6 - fotos.length) }, () => `<div class="slot"><span>${esc(L.slot)}</span></div>`);
+  $("grid").innerHTML = [...fotos, ...vazios].join("");
+}
+function setLang(code) {
+  L = TXT[code] || TXT.pt;
+  document.documentElement.lang = L.lang;
+  document.querySelectorAll("[data-t]").forEach((el) => { el.innerHTML = L.t[el.dataset.t] ?? TXT.pt.t[el.dataset.t]; });
+  document.querySelectorAll("[data-a]").forEach((el) => { const [attr, k] = el.dataset.a.split(":"); el.setAttribute(attr, L.a[k] ?? TXT.pt.a[k]); });
+  document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === code)));
+  renderMarquee(); renderGrid(); renderReviews();
+}
+const STARS = '<svg aria-hidden="true"><use href="#i-star"/></svg>'.repeat(5);
+function renderReviews() {
+  /* com foto primeiro; o resto mantém a ordem */
+  const lista = [...site.avaliacoes].sort((x, y) => !!y.foto - !!x.foto);
+  $("reviews").innerHTML = lista.map((a) => {
+    const longo = a.texto.length + (a.texto.split("\n").length - 1) * 35 > (a.foto ? 130 : 330);
+    const ini = a.nome.replace(/[^\p{L} ]/gu, "").split(" ").filter(Boolean).slice(0, 2).map((p) => p[0]).join("");
+    const foto = a.foto ? `<button type="button" class="review-photo" data-src="${a.foto}" data-alt="${esc(L.rev.foto)}" aria-label="${esc(L.rev.foto)}"><img src="${a.foto}" alt="${esc(L.rev.foto)}" loading="lazy" decoding="async"></button>` : "";
+    return `<article class="review${a.foto ? " has-photos" : ""}"><div class="review-head"><div class="avatar" aria-hidden="true">${esc(ini)}</div><div style="min-width:0"><h3>${esc(a.nome)}</h3><time>${esc(L.rev.tempo(a.anos))}</time></div><span class="g-badge" role="img" aria-label="${esc(L.rev.googleAria)}"><svg><use href="#i-g"/></svg></span></div><div class="stars" role="img" aria-label="${esc(L.rev.starsAria)}">${STARS}</div><p class="review-text clamp" lang="pt-BR">${esc(a.texto).replace(/\n/g, "<br>")}</p><button type="button" class="more"${longo ? "" : " hidden"}>${esc(L.rev.mais)}</button>${foto}</article>`;
+  }).join("");
+}
+document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
+setLang((location.search.match(/[?&]lang=(pt|en|es)\b/) || [])[1] || "pt");
+$("year").textContent = new Date().getFullYear();
+$("badge-stars").innerHTML = STARS;
+
+/* --- avaliações: ler mais, setas e rolagem automática --- */
+$("reviews").addEventListener("click", (e) => {
+  const b = e.target.closest(".more"); if (!b) return;
+  const open = b.previousElementSibling.classList.toggle("clamp");
+  b.textContent = open ? L.rev.mais : L.rev.menos;
+});
+(function () {
+  const box = $("reviews"), wrap = $("reviews-box"), reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let paused = false;
+  function scroll(dir) {
+    const c = box.querySelector(".review"), w = (c ? c.offsetWidth : box.clientWidth) + 16, behavior = reduced ? "auto" : "smooth";
+    if (dir === 1 && box.scrollLeft + box.clientWidth >= box.scrollWidth - 8) return box.scrollTo({ left: 0, behavior });
+    if (dir === -1 && box.scrollLeft <= 8) return box.scrollTo({ left: box.scrollWidth, behavior });
+    box.scrollBy({ left: dir * w, behavior });
+  }
+  $("rev-prev").onclick = () => scroll(-1);
+  $("rev-next").onclick = () => scroll(1);
+  ["mouseenter", "focusin", "pointerdown"].forEach((ev) => wrap.addEventListener(ev, () => paused = true));
+  ["mouseleave", "focusout", "pointerup"].forEach((ev) => wrap.addEventListener(ev, () => paused = false));
+  if (!reduced) setInterval(() => { if (!paused && !document.hidden && $("lb").hidden) scroll(1); }, 5000);
+})();
+
+/* --- foto ampliada (portfólio e fotos das avaliações) --- */
+(function () {
+  const lb = $("lb"); let opener = null;
+  function close() { lb.hidden = true; document.body.style.overflow = ""; opener?.focus(); }
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".pf, .review-photo"); if (!b) return;
+    opener = b; $("lb-media").innerHTML = `<img src="${b.dataset.src}" alt="${b.dataset.alt}">`;
+    lb.hidden = false; document.body.style.overflow = "hidden"; $("lb-close").focus();
+  });
+  lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
+  $("lb-close").onclick = close;
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) close(); });
+})();
+
+/* --- formulário: nome + telefone (máscara BR) e envio pelo WhatsApp --- */
+(function () {
+  const form = $("lead-form"), nome = $("f-nome"), tel = $("f-tel");
+  function mask(v) {
+    const d = v.replace(/\D/g, "").slice(0, 11);
+    if (d.length <= 2) return d ? `(${d}` : "";
+    if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+  }
+  const telOk = (v) => { const d = v.replace(/\D/g, ""); return d[0] !== "0" && (d.length === 10 || (d.length === 11 && d[2] === "9")); };
+  const setErr = (input, msg) => { input.setAttribute("aria-invalid", msg ? "true" : "false"); $(input.getAttribute("aria-describedby")).textContent = msg; };
+  tel.addEventListener("input", () => { tel.value = mask(tel.value); if (tel.getAttribute("aria-invalid") === "true" && telOk(tel.value)) setErr(tel, ""); });
+  nome.addEventListener("input", () => { if (nome.value.trim().length >= 2) setErr(nome, ""); });
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const okN = nome.value.trim().length >= 2, okT = telOk(tel.value);
+    setErr(nome, okN ? "" : L.form.errNome); setErr(tel, okT ? "" : L.form.errTel);
+    if (!okN) return nome.focus();
+    if (!okT) return tel.focus();
+    if (site.webhook) {
+      const dados = new URLSearchParams({
+        nome: nome.value.trim(), telefone: tel.value, telefone_whatsapp: "55" + tel.value.replace(/\D/g, ""),
+        idioma: document.documentElement.lang, pagina: location.href,
+        data: new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", hour12: false }).replace(",", ""),
+      });
+      try { fetch(site.webhook, { method: "POST", body: dados, mode: "no-cors", keepalive: true }).catch(() => {}); } catch (_) {}
+    }
+    const ok = $("form-ok");
+    ok.innerHTML = `${esc(L.form.ok)}<a href="${waLink()}" target="_blank" rel="noopener noreferrer">${esc(L.form.okLink)}</a>.`;
+    ok.hidden = false;
+    window.open(waLink(), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>
