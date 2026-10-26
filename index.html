@@ -9,11 +9,11 @@
 <meta property="og:description" content="Realismo preto e cinza em Florianópolis com o 2P. Orçamento pelo WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="assets/banner-2p.webp">
+<meta property="og:image" content="assets/banner-2p-tatuando.webp">
 <meta name="theme-color" content="#0b0a0d">
 <link rel="icon" type="image/png" href="favicon.png?v=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
-<link rel="preload" as="image" href="assets/banner-2p.webp" imagesrcset="assets/banner-2p-800.webp 800w, assets/banner-2p.webp 1400w" imagesizes="(min-width: 768px) 56vw, 100vw" fetchpriority="high">
+<link rel="preload" as="image" href="assets/banner-2p-tatuando.webp" imagesrcset="assets/banner-2p-tatuando-800.webp 800w, assets/banner-2p-tatuando.webp 1400w" imagesizes="(min-width: 768px) 56vw, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- fontes carregadas sem bloquear a primeira pintura da página -->
@@ -60,7 +60,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- HERO ---------- */
 .hero { position: relative; overflow: hidden; background: var(--ink); color: var(--hero-fg); }
-.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 30%; }
 .hero::after { content: ""; position: absolute; inset: 0; background: rgb(10 10 10 / .6); pointer-events: none; }
 .hero-inner { position: relative; z-index: 1; min-height: 78svh; display: flex; align-items: flex-end; justify-content: center; padding-block: 5rem 3.5rem; }
 .hero-copy { max-width: 36rem; text-align: center; }
@@ -70,7 +70,7 @@ img { max-width: 100%; display: block; }
 @media (min-width: 768px) { .hero-inner { min-height: 84svh; align-items: center; padding-block: 6rem; } }
 /* tablet e PC: foto do lado esquerdo, texto do lado direito */
 @media (min-width: 768px) {
-  .hero-img { right: auto; width: 56%; object-position: 50% 35%; }
+  .hero-img { right: auto; width: 56%; object-position: 40% 8%; }
   .hero::after { background: linear-gradient(270deg, var(--ink) 0 44%, rgb(11 11 11 / .55) 58%, rgb(10 10 10 / .12) 100%); }
   .hero-inner { justify-content: flex-end; }
   .hero-copy { text-align: left; width: 44%; max-width: 31rem; }
@@ -262,7 +262,7 @@ footer { background: var(--ink); color: var(--hero-fg); border-top: 1px solid rg
     <button type="button" data-lang="en" aria-pressed="false" title="English"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#B22234"/><g fill="#fff"><rect y="1.54" width="30" height="1.54"/><rect y="4.62" width="30" height="1.54"/><rect y="7.69" width="30" height="1.54"/><rect y="10.77" width="30" height="1.54"/><rect y="13.85" width="30" height="1.54"/><rect y="16.92" width="30" height="1.54"/></g><rect width="12" height="10.77" fill="#3C3B6E"/></svg>EN</button>
     <button type="button" data-lang="es" aria-pressed="false" title="Español"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg>ES</button>
   </nav>
-  <img class="hero-img" src="assets/banner-2p.webp" srcset="assets/banner-2p-800.webp 800w, assets/banner-2p.webp 1400w" sizes="(min-width: 768px) 56vw, 100vw" width="1400" height="1863" fetchpriority="high" decoding="async" data-a="alt:heroAlt" alt="Pedro, o 2P, sorrindo, sentado no estúdio de camiseta preta, com tatuagens no pescoço, nos braços e nas mãos">
+  <img class="hero-img" src="assets/banner-2p-tatuando.webp" srcset="assets/banner-2p-tatuando-800.webp 800w, assets/banner-2p-tatuando.webp 1400w" sizes="(min-width: 768px) 56vw, 100vw" width="1400" height="2100" fetchpriority="high" decoding="async" data-a="alt:heroAlt" alt="Pedro, o 2P, de perfil e de luvas pretas, concentrado enquanto tatua no estúdio, com tatuagens no pescoço e nos braços">
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <p class="brand">2P Tattoo · Florianópolis</p>
@@ -444,7 +444,7 @@ const TXT = {
       orcBotao: "Get my quote", direitos: "All rights reserved.",
     },
     a: {
-      langAria: "Language", heroAlt: "Pedro, known as 2P, smiling, seated in the studio in a black T-shirt, with tattoos on his neck, arms and hands",
+      langAria: "Language", heroAlt: "Pedro, known as 2P, in profile and wearing black gloves, focused while tattooing in the studio, with tattoos on his neck and arms",
       projetos: "Recent projects", projAnt: "Previous project", projProx: "Next project", portfolio: "Portfolio", avAria: "Client reviews", avAnt: "Previous review", avProx: "Next review",
       aboutAlt: "Pedro, known as 2P, smiling in the studio in a black T-shirt, with tattoos on his neck, arms and hands",
       igAria: "2P's Instagram", fNomePh: "Your full name", lbAria: "Enlarged photo", lbFechar: "Close", lbAnt: "Previous photo", lbProx: "Next photo",
@@ -476,7 +476,7 @@ const TXT = {
       orcBotao: "Quiero recibir mi presupuesto", direitos: "Todos los derechos reservados.",
     },
     a: {
-      langAria: "Idioma", heroAlt: "Pedro, conocido como 2P, sonriendo, sentado en el estudio con camiseta negra y tatuajes en el cuello, los brazos y las manos",
+      langAria: "Idioma", heroAlt: "Pedro, conocido como 2P, de perfil y con guantes negros, concentrado mientras tatúa en el estudio, con tatuajes en el cuello y los brazos",
       projetos: "Proyectos recientes", projAnt: "Proyecto anterior", projProx: "Siguiente proyecto", portfolio: "Portafolio", avAria: "Reseñas de clientes", avAnt: "Reseña anterior", avProx: "Siguiente reseña",
       aboutAlt: "Pedro, conocido como 2P, sonriendo en el estudio con camiseta negra y tatuajes en el cuello, los brazos y las manos",
       igAria: "Instagram de 2P", fNomePh: "Tu nombre completo", lbAria: "Foto ampliada", lbFechar: "Cerrar", lbAnt: "Foto anterior", lbProx: "Foto siguiente",
