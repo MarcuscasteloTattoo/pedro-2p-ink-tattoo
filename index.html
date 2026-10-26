@@ -382,7 +382,16 @@ const site = {
   webhook: "https://hook.eu2.make.com/ls3ghva547m8ky1n59e1ztl1smwkwlph",
   /* carrossel "Projetos recentes" — textos em TXT.*.estilos, na mesma ordem.
      Aparece quando houver pelo menos 3 projetos. */
-  estilos: [],
+  estilos: [
+    { img: "assets/2p-pf-03.webp" },
+    { img: "assets/2p-pf-19.webp" },
+    { img: "assets/2p-pf-02.webp" },
+    { img: "assets/2p-pf-14.webp" },
+    { img: "assets/2p-pf-20.webp" },
+    { img: "assets/2p-pf-12.webp" },
+    { img: "assets/2p-pf-16.webp" },
+    { img: "assets/2p-pf-11.webp" },
+  ],
   /* Avaliações do Google (texto original, em português). meses = há quantos meses.
      Para mostrar fotos: fotos: ["assets/avaliacao-nome-1.webp", ...] */
   avaliacoes: [
@@ -398,7 +407,7 @@ const site = {
   ],
   /* portfólio — descrições em TXT.*.portfolio, na mesma ordem (cada foto tem uma versão "-480" para celular).
      Enquanto houver menos de 6 fotos, o restante aparece como espaço reservado. */
-  portfolio: ["assets/2p-01.webp"],
+  portfolio: ["01", "04", "05", "06", "07", "08", "09", "10", "13", "15", "17", "18"].map((n) => `assets/2p-pf-${n}.webp`),
 };
 
 /* ============ TEXTOS (PT / EN / ES) ============
@@ -412,9 +421,29 @@ const TXT = {
     form: { nome: "Nome", tel: "Telefone", errNome: "Digite seu nome.", errTel: "Digite um telefone válido com DDD.", ok: "Recebemos seu contato! Continue a conversa no WhatsApp que acabou de abrir." },
     ampliar: "Ampliar: ", slot: "Foto do portfólio",
     marquee: ["REALISMO", "PRETO & CINZA", "DETALHE", "VOLUME", "TEXTURA", "PROJETOS ÚNICOS", "ATEMPORAL"],
-    estilos: [],
+    estilos: [
+      ["Medusa", "Rosto feminino com serpentes e grega, em realismo preto e cinza.", "Medusa com serpente e grega no rosto, em realismo preto e cinza no braço"],
+      ["Perseu", "Perseu segurando a cabeça da Medusa, em mitologia grega no antebraço.", "Perseu segurando a cabeça da Medusa no antebraço, em realismo preto e cinza"],
+      ["Homenagem à mãe", "Retrato realista da mãe sorrindo, com a palavra Mãe em lettering.", "Retrato realista de uma senhora sorrindo, com a palavra Mãe no peito"],
+      ["Nascimento", "Pezinho de bebê com relógio, data, peso e medida do nascimento do Ragnar.", "Pezinho de bebê com relógio, data, peso de 3,060 kg, fita métrica e o nome Ragnar"],
+      ["Braço fechado", "Braço inteiro em realismo preto e cinza, do ombro ao punho.", "Braço fechado inteiro em realismo preto e cinza"],
+      ["Jesus Cristo", "Rosto de Jesus com coroa de espinhos, em realismo no ombro.", "Rosto de Jesus Cristo com coroa de espinhos no ombro"],
+      ["Guerreiro coroado", "Guerreiro com coroa e machado duplo, em realismo no antebraço.", "Guerreiro coroado segurando um machado duplo, no antebraço"],
+      ["Águia", "Águia com penas em detalhe, em realismo preto e cinza no braço.", "Águia com asas em realismo preto e cinza no braço"],
+    ],
     portfolio: [
-      "Rosácea gótica em blackwork com relógio de números romanos no antebraço",
+      "Retrato de bebê de touca, com o nome Santino e a data em lettering",
+      "Nossa Senhora em oração no antebraço",
+      "Buldogue francês com bússola e lettering no antebraço",
+      "Macaco estilizado com charuto, cifrão e Torre Eiffel no braço",
+      "Máscara hannya em realismo preto e cinza no antebraço",
+      "Máscara hannya com flores no antebraço",
+      "Buda com mandala no braço",
+      "Pitbull com coleira de corrente no peito",
+      "Rosa em realismo no pescoço",
+      "Porco estilizado de óculos, com microfone e corrente, no braço",
+      "Rosto feminino com ornamentos no braço",
+      "Dragão oriental no ombro",
     ],
     t: {}, a: {}, /* lidos da própria página */
   },
@@ -426,9 +455,29 @@ const TXT = {
     form: { nome: "Name", tel: "Phone", errNome: "Please enter your name.", errTel: "Please enter a valid phone number with area code.", ok: "We got your details! Continue the conversation in the WhatsApp chat that just opened." },
     ampliar: "Enlarge: ", slot: "Portfolio photo",
     marquee: ["REALISM", "BLACK & GREY", "DETAIL", "VOLUME", "TEXTURE", "ONE-OF-A-KIND PROJECTS", "TIMELESS"],
-    estilos: [],
+    estilos: [
+      ["Medusa", "A woman's face with snakes and a Greek key pattern, in black and grey realism.", "Medusa with a snake and a Greek key on her face, black and grey realism on the arm"],
+      ["Perseus", "Perseus holding Medusa's head, Greek mythology on the forearm.", "Perseus holding Medusa's head on the forearm, black and grey realism"],
+      ["Tribute to mom", "A realistic portrait of a smiling mother, with the word Mãe in lettering.", "Realistic portrait of a smiling woman with the word Mãe (Mom) on the chest"],
+      ["Birth", "A baby's foot with a clock, date, weight and length from Ragnar's birth.", "Baby's foot with a clock, date, 3.060 kg weight, measuring tape and the name Ragnar"],
+      ["Full sleeve", "A whole arm in black and grey realism, from shoulder to wrist.", "Full sleeve in black and grey realism"],
+      ["Jesus Christ", "The face of Jesus with a crown of thorns, realism on the shoulder.", "Face of Jesus Christ with a crown of thorns on the shoulder"],
+      ["Crowned warrior", "A warrior with a crown and a double axe, realism on the forearm.", "Crowned warrior holding a double axe, on the forearm"],
+      ["Eagle", "An eagle with detailed feathers, black and grey realism on the arm.", "Eagle with wings in black and grey realism on the arm"],
+    ],
     portfolio: [
-      "Gothic rose window in blackwork with a Roman numeral clock on the forearm",
+      "Portrait of a baby in a beanie, with the name Santino and the date in lettering",
+      "Virgin Mary in prayer on the forearm",
+      "French bulldog with a compass and lettering on the forearm",
+      "Stylized monkey with a cigar, dollar sign and Eiffel Tower on the arm",
+      "Hannya mask in black and grey realism on the forearm",
+      "Hannya mask with flowers on the forearm",
+      "Buddha with a mandala on the arm",
+      "Pit bull with a chain collar on the chest",
+      "Realistic rose on the neck",
+      "Stylized pig in glasses with a microphone and chain on the arm",
+      "Woman's face with ornaments on the arm",
+      "Eastern dragon on the shoulder",
     ],
     t: {
       h1: 'Black <span class="nw">&amp; grey</span> realism',
@@ -458,9 +507,29 @@ const TXT = {
     form: { nome: "Nombre", tel: "Teléfono", errNome: "Escribe tu nombre.", errTel: "Escribe un teléfono válido con código de área.", ok: "¡Recibimos tus datos! Continúa la conversación en el WhatsApp que se acaba de abrir." },
     ampliar: "Ampliar: ", slot: "Foto del portafolio",
     marquee: ["REALISMO", "NEGRO & GRIS", "DETALLE", "VOLUMEN", "TEXTURA", "PROYECTOS ÚNICOS", "ATEMPORAL"],
-    estilos: [],
+    estilos: [
+      ["Medusa", "Rostro femenino con serpientes y greca, en realismo negro y gris.", "Medusa con serpiente y greca en el rostro, en realismo negro y gris en el brazo"],
+      ["Perseo", "Perseo sosteniendo la cabeza de Medusa, mitología griega en el antebrazo.", "Perseo sosteniendo la cabeza de Medusa en el antebrazo, en realismo negro y gris"],
+      ["Homenaje a mamá", "Retrato realista de una madre sonriendo, con la palabra Mãe en lettering.", "Retrato realista de una señora sonriendo, con la palabra Mãe (mamá) en el pecho"],
+      ["Nacimiento", "Piecito de bebé con reloj, fecha, peso y medida del nacimiento de Ragnar.", "Piecito de bebé con reloj, fecha, peso de 3,060 kg, cinta métrica y el nombre Ragnar"],
+      ["Manga completa", "Brazo entero en realismo negro y gris, del hombro a la muñeca.", "Manga completa en realismo negro y gris"],
+      ["Jesucristo", "Rostro de Jesús con corona de espinas, en realismo en el hombro.", "Rostro de Jesucristo con corona de espinas en el hombro"],
+      ["Guerrero coronado", "Guerrero con corona y hacha doble, en realismo en el antebrazo.", "Guerrero coronado sosteniendo un hacha doble, en el antebrazo"],
+      ["Águila", "Águila con plumas en detalle, en realismo negro y gris en el brazo.", "Águila con alas en realismo negro y gris en el brazo"],
+    ],
     portfolio: [
-      "Rosetón gótico en blackwork con reloj de números romanos en el antebrazo",
+      "Retrato de bebé con gorro, con el nombre Santino y la fecha en lettering",
+      "Virgen María en oración en el antebrazo",
+      "Bulldog francés con brújula y lettering en el antebrazo",
+      "Mono estilizado con puro, signo de dólar y Torre Eiffel en el brazo",
+      "Máscara hannya en realismo negro y gris en el antebrazo",
+      "Máscara hannya con flores en el antebrazo",
+      "Buda con mandala en el brazo",
+      "Pitbull con collar de cadena en el pecho",
+      "Rosa en realismo en el cuello",
+      "Cerdo estilizado con gafas, micrófono y cadena en el brazo",
+      "Rostro femenino con ornamentos en el brazo",
+      "Dragón oriental en el hombro",
     ],
     t: {
       h1: 'Realismo en negro <span class="nw">y gris</span>',
